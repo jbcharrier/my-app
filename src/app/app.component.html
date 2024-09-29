@@ -1,1 +1,21 @@
-<router-outlet />
+<div class="container home">
+  <div class="header row">
+    <div class="col">
+      <h4>Liste des demandes</h4>
+      <p>Gérer les demandes d'autorisation de travaux.</p>
+    </div>
+    <div class="col addButton d-flex align-items-center justify-content-end">
+      <button class="base-button" (click)="openAddDialog()" mat-flat-button>
+        <mat-icon>add</mat-icon>Ajouter
+      </button>
+    </div>
+  </div>
+  <div class="autorisation-container">
+    <app-autorisation
+      (modifyAutorisation)="modifyAutorisation($event)"
+      class="autorisation"
+      [autorisation]="autorisation"
+      *ngFor="let autorisation of autorisationsList | async"
+    ></app-autorisation>
+  </div>
+</div>
