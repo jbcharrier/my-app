@@ -16,7 +16,7 @@
         <mat-card-content>
           <div class="infos-container d-flex">
             <div class="chip user">{{ autorisation.user }}</div>
-            <div class="chip contract">{{ autorisation.contract }}</div>
+            <div *ngIf="autorisation.contract" class="chip contract">{{ autorisation.contract }}</div>
           </div>
         </mat-card-content>
       </div>
