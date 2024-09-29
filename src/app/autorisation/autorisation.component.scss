@@ -1,0 +1,58 @@
+.mdc-card {
+  background-color: white;
+  margin-bottom: 1rem;
+  &.mat-mdc-card-outlined {
+    border-width: 0;
+  }
+  .header {
+    padding: 1rem 2rem;
+    .main-header {
+      .icon-main {
+        display: flex;
+        margin-right: 1rem;
+        padding: 1rem;
+        background-color: #e0f2fe;
+        border-radius: 50%;
+        .mat-icon {
+          color: #0086c9;
+        }
+      }
+      .content-main {
+        p,
+        h5 {
+          margin: 0;
+        }
+        .mat-mdc-card-content{
+          margin-top: 1rem;
+          padding: 0;
+          .chip{
+            margin-right: 1rem;
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 0 1rem;
+            font-weight: 300;
+            &.user{
+              background-color: #354152;
+              color: white;
+            }
+            &.contract{
+              background-color: #EDF2F6;
+              color: #373F72;
+            }
+          }
+        }
+      }
+    }
+    .actions-header {
+      .chip-container {
+        margin-right: 1rem;
+        .custom-chip {
+          padding: 5px 20px;
+          border-radius: 2rem;
+          background-color: #fff0c7;
+          color: #dc6804;
+        }
+      }
+    }
+  }
+}

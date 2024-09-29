@@ -1,0 +1,39 @@
+<mat-card appearance="outlined">
+  <div class="header d-flex justify-content-between">
+    <div class="main-header d-flex">
+      <div class="icon-container">
+        <div class="icon-main">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="description"
+          ></mat-icon>
+        </div>
+      </div>
+      <div class="content-main">
+        <p>Demande d'autorisation de travaux</p>
+        <h5>{{ autorisation.name }}</h5>
+        <mat-card-content>
+          <div class="infos-container d-flex">
+            <div class="chip user">{{ autorisation.user }}</div>
+            <div class="chip contract">{{ autorisation.contract }}</div>
+          </div>
+        </mat-card-content>
+      </div>
+    </div>
+    <div class="actions-header d-flex">
+      <div class="chip-container"><span class="custom-chip">{{autorisation.status}}</span></div>
+      <div mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="modify(autorisation)">
+          <span>Modifier</span>
+        </button>
+        <button mat-menu-item (click)="deleteAutorisation(autorisation)">
+          <span>Supprimer</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-card>

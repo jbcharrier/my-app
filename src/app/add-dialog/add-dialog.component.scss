@@ -1,0 +1,38 @@
+.add-dialog{
+  padding: 0;
+  h5{
+    margin: 2rem 1rem 0;
+  }
+  .line{
+    margin: 2rem 0;
+    border: 1px solid #F1F3F7;
+  }
+  .input-container{
+    margin: 3rem 0 0;
+    padding: 0 2rem;
+    .custom-input {
+      margin: 3rem 0;
+    }
+    .custom-input:last-of-type {
+      margin-bottom: 0;
+    }
+    .inputEnv{
+      .error{
+        color: red;
+        font-size: 12px;
+        padding-left: 5px;
+      }
+    }
+  }
+  .button-container{
+    padding: 0 2rem;
+    button {
+      ::ng-deep .mdc-button__label{
+        padding: 0 1rem !important;
+      }
+      &.mat-mdc-button-disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}

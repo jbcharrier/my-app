@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/variables.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: $main-font;
+  background-color: #F8FAFC;
+}
+
+/*** Global Styles ***/
+
+input.custom-input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+input.custom-input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+}
+
+input.custom-input::placeholder {
+  color: #6c757d;
+}
+
+.base-button {
+  background-color: #155EEF !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}
+
+.stroke-button{
+  background-color: white !important;
+  color: #155EEF !important;
+  border: 1px solid #155EEF !important;
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}

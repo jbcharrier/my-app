@@ -1,0 +1,61 @@
+<div class="container add-dialog">
+  <h5>Ajouter une demande d'autorisation</h5>
+  <div class="line"></div>
+  <form
+    [formGroup]="autorisationFormModel"
+    (ngSubmit)="addOrModifyAutorisation()"
+  >
+    <div class="container input-container">
+      <div class="inputEnv">
+        <input
+          type="text"
+          class="custom-input"
+          placeholder="Projet de travaux*"
+          formControlName="name"
+        />
+        <span
+          class="error"
+          *ngIf="
+            autorisationFormModel.get('name')?.touched &&
+            autorisationFormModel.hasError('required', 'name')
+          "
+          >Ce champs est obligatoire</span
+        >
+      </div>
+      <div class="inputEnv">
+        <input
+          type="text"
+          class="custom-input"
+          placeholder="Utilisateur*"
+          formControlName="user"
+        />
+        <span
+          class="error"
+          *ngIf="
+            autorisationFormModel.get('user')?.touched &&
+            autorisationFormModel.hasError('required', 'user')
+          "
+          >Ce champs est obligatoire</span
+        >
+      </div>
+      <input
+        type="text"
+        class="custom-input"
+        placeholder="Contrat"
+        formControlName="contract"
+      />
+    </div>
+    <div class="line"></div>
+    <div class="button-container d-flex justify-content-between">
+      <button (click)="closeDialog($event)" mat-stroked-button class="stroke-button">Annuler</button>
+      <button
+        type="submit"
+        mat-button
+        class="base-button"
+        [disabled]="autorisationFormModel.invalid"
+      >
+        {{ isModifyMode ? "Modifier" : "Créer" }}
+      </button>
+    </div>
+  </form>
+</div>
